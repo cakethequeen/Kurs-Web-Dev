@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
-    <body>
+    <head>
+        <title>Contact</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>    
+<body>
+    <nav>
         <a href="/index.html">Home</a> 
         <a href="/about/">About</a> 
         <a href="/contact">Contact</a> 
         <a href="/login">LogIn</a>
-    </body>
+    </nav>
+    <main>
     <header>
         <h1>Contact</h1>
-        <h2>Adresse</h2>
-        <p>Musterstr.12, 55577 Musterstadt</p>
-        <p>Dein Name</p>
-        <p>Deine E-Mail</p>
-        <p>Deine Nachricht</p>
+        <h2>Anschrift</h2>
+        <form class="form form--contact">
+            <div class="form-group form-group--name">
+                <label for="name">Vor-/Nachname</label>
+                <input class="form__input" type="text"> </input>
+            </div>
+            <div class="form-group form-group--mail">
+                <label for="mail">E-Mail</label>
+                <input class="form__input" type="text"> </input>
+            </div>
+            <div class="form-group form-group--address">
+                <label for="address">Adresse</label>
+                <input class="form__input" type="text"> </input>
+            </div>
+            <div class="form-group form-group--message">
+                <label for="message">Ihre Nachricht</label>
+                <input class="form__input input-message" name="message" placeholder="Deine Nachricht" type="text"> </input>
+                <p>
+                    Diese Nachricht geht an:<br>
+                    Katharina Offermann<br>
+                    offi@mail.de<br>
+                    Dünnwalder Str.11, 51061
+                </p>
+            </div>
+            <button class="button5" style="border-radius: 23px;" button class="btn send">Senden</button>
+        </form>
     </header>
+    </main>
+    <footer>
+        <p>Copyrighty by Kathi</p>
+    </footer>
+</body>
+</html>
