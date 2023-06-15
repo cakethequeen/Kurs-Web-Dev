@@ -84,12 +84,13 @@ footer {
 
 /* Buttons */
 button {
-    background-color: #85daff ; /* grean */
+    background-color: #85daff ; /* blue */
     border: none;
-    color: white;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     text-decoration: none;
+    font-weight: bold;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
