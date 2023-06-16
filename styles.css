@@ -15,8 +15,6 @@ body {
     font-family: var(--ff-text);
     color: var(--text);
     background-color: var(--background);
-    min-height: 100vh;
-    min-height: 100dvh;
 }
 
 /* TYPOGRAPHY */
@@ -27,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     color:#0e6acd;
     font-weight: 700;
-    font-size: 400%;
+    font-size: 4rem;
 }
 
 a {
@@ -52,33 +50,40 @@ mark {
 ::marker {
     content: "";
 }
+.linksbuendig {
+    text-align: left;
+}
 
 
 /* LAYOUT */
 body {
-    display: grid;
-    grid-template-rows: 55px 1fr 55px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 nav {
-    grid-row: 1 / 2;
-    width: 100%;
-    background-color: var(--secondary-button);
-    padding: 1rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    width: calc(100% - 2rem);
+    height: 23px;
+    padding: 1rem;
+    background-color: var(--secondary-button);
+    font-size: 1.2rem;
 }
 main {
     display: flex;
-    grid-row: 2 / 3;
-    width: min(100% - 3rem,55ch);
-    justify-content: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
 }
 footer {
     display: flex;
     justify-content: center;
-    grid-row: 3 / 4;
+    height: 55px;
     font-style: italic;
 }
 
@@ -95,19 +100,48 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    
+    height: fit-content;
 }
 
 .button1 {border-radius: 2px;}
 .button2 {border-radius: 4px;}
 .button3 {border-radius: 8px;}
 .button4 {border-radius: 12px;}
-.button5 {border-radius: 50%; grid-column: 3 / 5; grid-row: 3 / 3;}
+.button5 {border-radius: 30%; grid-column: 3 / 5; grid-row: 3 / 3;}
+
+/* Text Media */
+
+p {
+    width: min(100% - 3rem,55ch);
+}
+
+.text-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+}
+
+.media {
+    padding-top: 1em;
+    width: min(100% - 3rem,55ch);
+}
+
+.media img {
+    width: 100%;
+}
 
 /* Formulare */
 
 .form {
     
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.8em;
 }
 
 .form-group {
@@ -118,43 +152,37 @@ button {
 
 .form__input {
     border-radius: 8px;
+    min-width: 35ch;
+}
+
+label {
+    font-weight: bold;
+}
+
+.desc-submit {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Special Formular Elements */
 
 .input-message {
-    width: 600px;
-    height: 200px;
+    height: 9rem;
 }
 
 /* Formular Modifier */
 
 .form--login {
     display: flex;
-    gap: 5rem;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .form--contact {
-    display: grid;
-    gap: 5rem;
-    grid-template-columns: 40ch 40ch;
-    grid-template-rows: auto;
-}
-
-.form-group--name {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-.form-group--mail {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-.form-group--address {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
-.form-group--message {
-    grid-column: 2 / 3;
-    grid-row: 1 / 8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: min(100%, 120ch);
 }
